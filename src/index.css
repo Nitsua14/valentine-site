@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base: soft, dreamy feel */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent text selection on interactive elements */
+button {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth transitions globally */
+* {
+  box-sizing: border-box;
+}
+@keyframes burst {
+  from {
+    transform: rotate(var(--r)) translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(var(--r)) translateX(140vw);
+    opacity: 0;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Soft glow for celebration message */
+.romantic-glow {
+  text-shadow:
+    0 0 10px rgba(255, 182, 193, 0.6),
+    0 0 24px rgba(255, 105, 180, 0.4);
+}
